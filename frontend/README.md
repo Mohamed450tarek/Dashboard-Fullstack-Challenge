@@ -33,6 +33,11 @@ This project is built with:
 - Vite
 - TypeScript
 - React
+
+#run
+npm run dev
+out put link localhost
+ 
 - shadcn-ui
 - Tailwind CSS
 
