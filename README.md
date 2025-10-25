@@ -1,8 +1,7 @@
-# 🎯 Project Name
+# 🎯  Dashboard-Fullstack
 
 ## 🧾 Overview
-Briefly describe what your project does and its purpose.  
-مثلاً:  
+   
 This is a full-stack web application for managing courses, quizzes, and announcements for students and admins.
 
 ---
