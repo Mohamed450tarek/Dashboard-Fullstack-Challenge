@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+ /*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.btn {
+  @apply text-[15px] w-[9em] h-[3em] overflow-hidden cursor-pointer relative box-border shadow-[6px_6px_12px_#e3e3e3,-6px_-6px_12px_#ffffff] z-[1] m-5 p-2.5 rounded-[30em] border-[none] before:content-[""] before:w-0 before:h-[3em] before:absolute before:bg-[linear-gradient(to_right,#0fd850_0%,#f9f047_100%)] before:transition-[1s] before:duration-[ease] before:block before:z-[-1] before:rounded-[30em] before:left-0 before:top-0 hover:before:w-[9em];
+}

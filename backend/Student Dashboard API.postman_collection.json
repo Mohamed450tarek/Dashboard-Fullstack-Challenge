@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "9a423168-0fa0-4389-96c6-25ba553a5639",
+		"name": "Student Dashboard API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48201578",
+		"_collection_link": "https://mokalo450-1186646.postman.co/workspace/Mohamed-Tarek's-Workspace~9f37f319-b7ef-4e1d-8a74-ce6e8c4f1e13/collection/48201578-9a423168-0fa0-4389-96c6-25ba553a5639?action=share&source=collection_link&creator=48201578"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "/*{\r\n\r\n  \"username\": \"mohamed\",\r\n  \"email\": \"mohamed@test.com\",\r\n  \"password\": \"123456\"\r\n}\r\n*/\r\n\r\n{\r\n  \"username\": \"ahmed\",\r\n  \"email\": \"ahmed@test.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add new quiz by teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Physics Test\",\r\n  \"course\": \"Physics 101\",\r\n  \"description\": \"Basic concepts quiz\",\r\n  \"duration\": 10,\r\n  \"dueDate\": \"2025-11-01T00:00:00.000Z\",\r\n  \"questions\": [\r\n    {\r\n      \"type\": \"mcq\",\r\n      \"question\": \"What is the speed of light?\",\r\n      \"options\": [\"3x10^8 m/s\", \"5x10^6 m/s\"],\r\n      \"correctAnswer\": 0,\r\n      \"points\": 5\r\n    },\r\n    {\r\n      \"type\": \"essay\",\r\n      \"question\": \"Explain Newton's second law.\",\r\n      \"points\": 10\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update one quiz",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Physics Quiz\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/quizzes/68fa3c5607cdcd9292f25014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"quizzes",
+						"68fa3c5607cdcd9292f25014"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Announcement and get just change state",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete announcement",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
